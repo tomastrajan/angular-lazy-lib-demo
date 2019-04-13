@@ -1,0 +1,12 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+# 0.1.0 (2019-04-13)
+
+
+### Features
+
+* **build:** add release script ([7acd9e8](https://github.com/tomastrajan/angular-lazy-lib-demo/commit/7acd9e8))
+* **build:** add travis configuration ([6787f6d](https://github.com/tomastrajan/angular-lazy-lib-demo/commit/6787f6d))
+* **skeleton:** initial lazy lib routes example implementation ([9c4eead](https://github.com/tomastrajan/angular-lazy-lib-demo/commit/9c4eead))
