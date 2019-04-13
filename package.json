@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ci": "ng build --project @my-org/some-lib && ng build --prod",
+    "ci": "ng build --project @my-org/some-lib && ng build --prod --deploy-url /angular-lazy-lib-demo/ --base-href /angular-lazy-lib-demo",
     "release": "standard-version && git push --follow-tags origin master"
   },
   "private": true,
