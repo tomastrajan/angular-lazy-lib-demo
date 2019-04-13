@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.1](https://github.com/tomastrajan/angular-lazy-lib-demo/compare/v0.1.0...v0.1.1) (2019-04-13)
+
+
+### Bug Fixes
+
+* **build:** make it work with github pages ([b91e000](https://github.com/tomastrajan/angular-lazy-lib-demo/commit/b91e000))
+
+
+
 # 0.1.0 (2019-04-13)
 
 
