@@ -1,6 +1,40 @@
 <h3>How to lazy load modules from Angular libraries</h3>
 
-<button routerLink="home" class="mdl-button mdl-button--raised mdl-button--colored">Home</button>
-<button routerLink="lib" class="mdl-button mdl-button--raised mdl-button--colored">Lib</button>
+<nav>
+  <button routerLink="home" class="mdl-button mdl-button--raised mdl-button--colored">Home</button>
+  <button routerLink="lib" class="mdl-button mdl-button--raised mdl-button--colored">✅ Lib</button>
+  <button routerLink="lib-experimental" class="mdl-button mdl-button--raised mdl-button--colored">⚠️ Lib experimental</button>
+</nav>
 
-<router-outlet></router-outlet>
+<div class="wrapper">
+
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+
+  <section>
+    <h5>✅ Local wrapper module solution</h5>
+    <p>
+      "Lib" uses standard lazy loading import string <code>'./lazy/some-lib-wrapper.module#SomeLibWrapperModule'</code>
+      and will work in both dev and prod builds. The only downside is the necessity to create wrapper module <code>SomeLibWrapperModule</code>.
+    </p>
+
+
+    <h5>⚠️ Dynamic import solution</h5>
+    <p>
+      ️ "Lib experimental" uses <code>import('@my-org/some-lib').then(m => m.SomeLibModule)</code>
+      syntax and will currently work only in the JIT compilation mode (dev build). Also to make this work
+      in the dev build we have to adjust <code>tsconfig.json</code> and set <code>"module"</code> property to
+      the <code>"esnext"</code> value.
+    </p>
+
+    <h5>🌿 Future with Angular Ivy</h5>
+    <p>
+      This should change with Angular 8 (with Ivy enabled) where it should work by default and remove
+      the necessity for creation of local wrapper modules like <code>SomeLibWrapperModule</code> to make
+      lazy-loading of the libraries possible!
+    </p>
+  </section>
+
+</div>
+

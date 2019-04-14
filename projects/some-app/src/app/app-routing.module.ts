@@ -17,6 +17,10 @@ const routes: Routes = [
     loadChildren: './lazy/some-lib-wrapper.module#SomeLibWrapperModule'
   },
   {
+    path: 'lib-experimental',
+    loadChildren: () => import('@my-org/some-lib').then(m => m.SomeLibModule)
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }
